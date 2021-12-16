@@ -1,0 +1,26 @@
+footer {
+  padding: 10px;
+  height: 100px;
+  background-color: rgb(231, 231, 231);
+  border-top: lightgray 1px solid;
+  box-shadow: 0 0 5px lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .logo {
+    height: 40px;
+    
+    img {
+      height: 100%;
+      mix-blend-mode: multiply;
+    }
+  }
+
+  small {
+    margin-top: 20px;
+    font-size: 0.7rem;
+    color: darkgray;
+  }
+}

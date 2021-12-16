@@ -1,0 +1,36 @@
+// setup
+
+@import "setup/variables.scss";
+@import "setup/functions.scss";
+@import "setup/mixins.scss";
+@import "setup/typography.scss";
+
+// Basics
+
+@import "basics/helpers.scss";
+@import "basics/layout.scss";
+@import "basics/base.scss";
+@import "basics/font-awesome.scss";
+
+// pages
+
+@import "views/home-page.scss";
+@import "views/login-signup.scss";
+@import "views/toys-app.scss";
+@import "views/toy-details.scss";
+@import "views/toy-edit.scss";
+@import "views/toy-dashboard.scss";
+@import "views/about-page.scss";
+
+// cmps
+
+@import "cmps/app-header.scss";
+@import "cmps/toys-list.scss";
+@import "cmps/toy-preview.scss";
+@import "cmps/toy-add.scss";
+@import "cmps/app-footer.scss";
+@import "cmps/loader.scss";
+@import "cmps/filter.scss";
+@import "cmps/user-msg.scss";
+@import "cmps/review-add.scss";
+@import "cmps/stars-rating.scss";

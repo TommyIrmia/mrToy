@@ -1,0 +1,54 @@
+.details-container.edit-container {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+
+  input {
+    width: 200px;
+    outline: 0;
+    border: 2px orange solid;
+    border-radius: 1rem;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: transparent;
+  }
+
+  [name="price"] {
+    font-size: 1.3rem;
+    width: 100px;
+  }
+
+  select {
+    background-color: transparent;
+    outline: 0;
+    border: 2px orange solid;
+    border-radius: 1rem;
+    padding-left: 10px;
+    font-size: 1.3rem;
+    width: 100px;
+  }
+
+  .save-btn {
+    border: 0;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: darkgray;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    border-radius: 50%;
+    transition: 0.3s;
+
+    &:hover {
+      color: #e4a313;
+      text-shadow: 0 0 5px #eed6a4;
+    }
+  }
+
+  .toy-details.toy-edit .img-container {
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+}

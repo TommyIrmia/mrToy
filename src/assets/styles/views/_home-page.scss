@@ -1,0 +1,32 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  mix-blend-mode: multiply;
+
+  h3 {
+    color: #86448d;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    color: #4fc9eb;
+  }
+
+  a {
+    color: #e4a313;
+    transition: 0.5s;
+
+    &:hover {
+      color: rgb(255, 255, 255);
+      text-shadow: 0 0 10px #e4a313;
+    }
+  }
+
+  img {
+    height: 200px;
+  }
+}

@@ -1,0 +1,21 @@
+.login-page {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .login-btn {
+      color: whitesmoke;
+      background-color: #00a7d6;
+      &:hover {
+        background-color: #0084a8;
+      }
+    }
+  }
+}

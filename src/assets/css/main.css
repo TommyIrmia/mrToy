@@ -1,0 +1,603 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active {
+    color: #4fc9eb;
+}
+
+input, select {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Header */
+
+header {
+    padding: 0 20px;
+    height: 100px;
+    background-color: rgb(231, 231, 231);
+    border-bottom: lightgray 1px solid;
+    box-shadow: 0 0 5px lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #86448d;
+    font-weight: 700;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo h1 {
+    font-size: 20px;
+    margin: 0;
+    text-indent: 10px;
+}
+
+.logo img {
+    height: inherit;
+    mix-blend-mode: multiply;
+}
+
+/* Main */
+
+.main-container {
+    padding: 50px;
+    min-height: calc(100vh - 200px);
+}
+
+/* Home Page */
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: multiply;
+}
+
+.home-page h3 {
+    color: #86448d;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+.home-page h1 {
+    font-size: 1.7rem;
+    color: #4fc9eb;
+}
+
+.home-page a {
+    color: #e4a313;
+    transition: 0.5s;
+}
+
+.home-page a:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px #e4a313;
+}
+
+.home-page img {
+    height: 200px;
+}
+
+/* Toys app */
+
+.toys-app {
+    text-align: center;
+    position: relative;
+}
+
+.toys-app .add-btn {
+    border: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #00a7d6;
+    color: whitesmoke;
+    font-size: 1.4rem;
+    position: absolute;
+    top: -90px;
+    right: 50%;
+    transform: translateX(50%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.toys-app .add-btn:hover {
+    height: 100px;
+    width: 100px;
+    top: -100px;
+    background-color: #4fc9eb;
+}
+
+.toys-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.toy-preview {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px #e4a313 solid;
+    width: 250px;
+    height: 180px;
+    padding: 0 20px;
+    background: rgb(231, 231, 231);
+    text-align: center;
+    box-shadow: 0 0 3px #e4a313;
+    color: #a19f9bd0;
+}
+
+.toy-preview h1:first-child {
+    font-size: 1.3rem;
+    color: #00a7d6;
+    margin-bottom: 0;
+}
+
+.toy-preview h1:nth-child(2) {
+    margin: 0;
+}
+
+.toy-preview h1:nth-child(3) {
+    /* margin-top: 5px; */
+    font-size: 1.1rem;
+    color: #86448d;
+    text-align: right;
+    margin-bottom: 10px;
+    align-self: flex-end;
+}
+
+.toy-preview .stock {
+    position: absolute;
+    background-color: rgb(168, 5, 5);
+    width: 100%;
+    height: 40%;
+    line-height: 60px;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 900;
+    bottom: -1px;
+    border: 1px solid #e4a313;
+    border-top: 5px solid #e4a313;
+}
+
+.btns {
+    position: absolute;
+    left: 5px;
+    top: -25px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.btns.show {
+    opacity: 1;
+    top: 5px;
+    pointer-events: unset;
+}
+
+.btns button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: darkgray;
+    transition: color 0.5s;
+}
+
+.remove-btn:hover {
+    color: rgb(168, 5, 5);
+    text-shadow: 0 0 5px rgb(243, 165, 165);
+}
+
+.details-btn:hover, .back-btn:hover {
+    color: rgb(55, 55, 189);
+    text-shadow: 0 0 5px rgb(165, 191, 243);
+}
+
+.edit-btn:hover {
+    color: green;
+    text-shadow: 0 0 5px rgb(165, 243, 195);
+}
+
+/* Toy Add */
+
+.add-toy {
+    border-radius: 5px;
+    padding: 20px 0px 20px 20px;
+    margin: 0 auto 50px;
+    width: 500px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 5px #e4a313;
+}
+
+.add-toy input {
+    height: 40px;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    padding: 10px;
+    margin-inline-end: 10px;
+    margin-bottom: 10px;
+}
+
+.add-toy .select {
+    margin-inline-end: 10px;
+}
+
+.add-toy button {
+    border: 0;
+    height: 40px;
+    width: 40px;
+    align-self: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.add-toy button:hover {
+    transform: scale(1.2);
+}
+
+.add-toy .btn-add {
+    margin-inline-end: 5px;
+    background-color: #24e413;
+}
+
+.add-toy .btn-cancel {
+    background-color: #e41313;
+}
+
+/* Toy Details  + Edit*/
+
+.details-container {
+    color: rgb(44, 44, 44);
+    display: flex;
+    gap: 100px;
+}
+
+.details-container.edit-container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.details-container.edit-container input {
+    width: 200px;
+    outline: 0;
+    border: 2px orange solid;
+    border-radius: 1rem;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: transparent;
+}
+
+.details-container.edit-container [name="price"] {
+    font-size: 1.3rem;
+    width: 100px;
+}
+
+.details-container.edit-container select {
+    background-color: transparent;
+    outline: 0;
+    border: 2px orange solid;
+    border-radius: 1rem;
+    padding-left: 10px;
+    font-size: 1.3rem;
+    width: 100px;
+}
+
+.edit-container .save-btn {
+    border: 0;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: darkgray;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.edit-container .save-btn:hover {
+    color: #e4a313;
+    text-shadow: 0 0 5px #eed6a4;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: rgb(226, 61, 61);
+}
+
+.toy-details {
+    position: relative;
+    flex: 1;
+    border-radius: 2rem;
+    padding: 20px;
+    border: 1px lightgray solid;
+    box-shadow: 0 0 5px rgb(57, 63, 65);
+}
+
+.toy-details h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: #00a7d6;
+    border-bottom: 1px solid gray;
+    text-align: center;
+}
+
+.toy-details h2 small {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.toy-details .details-btns {
+    position: absolute;
+    display: flex;
+    /* flex-direction: column; */
+    gap: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+.details-btns button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: darkgray;
+    transition: color 0.5s;
+}
+
+.toy-details .img-container {
+    margin: 20px auto 0;
+    text-align: center;
+    width: 100%;
+    height: 220px;
+}
+
+.toy-details.toy-edit .img-container {
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.toy-details .img-container img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    border-radius: 3rem;
+}
+
+.review-list {
+    flex: 1;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.review-list>*:nth-child(odd) {
+    background-color: rgb(248, 254, 255);
+    box-shadow: 0 0 3px rgb(57, 63, 65);
+}
+
+.review-list>*:nth-child(even) {
+    background-color: rgb(254, 255, 247);
+    box-shadow: 0 0 3px rgb(57, 63, 65);
+}
+
+.review {
+    padding: 10px 20px;
+    border-radius: 1rem;
+    margin-bottom: 5px;
+}
+
+.review h3 {
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 0;
+}
+
+.review h4 {
+    margin-top: 0;
+}
+
+.review .date {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+/* Footer */
+
+footer {
+    padding: 10px;
+    height: 100px;
+    background-color: rgb(231, 231, 231);
+    border-top: lightgray 1px solid;
+    box-shadow: 0 0 5px lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .logo {
+    height: 40px;
+}
+
+footer small {
+    margin-top: 20px;
+    font-size: 0.7rem;
+    color: darkgray;
+}
+
+/* Loader */
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Filter */
+
+.toy-filter {
+    position: relative;
+    margin: 0 auto 30px;
+    width: 75%;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+}
+
+.toy-filter .search-img {
+    font-size: 1.5rem;
+    color: gray;
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    left: -30px;
+}
+
+.toy-filter [for='by-word'] {
+    width: 30%;
+}
+
+.toy-filter [name='word'] {
+    font-size: 1.05rem;
+    padding-left: 15px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    border-color: hsl(0, 0%, 80%);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.toy-filter select {
+    width: 10%;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    border-color: hsl(0, 0%, 80%);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.toy-filter .select {
+    height: 100%;
+    width: 60%;
+}
+
+/* user msg */
+
+.user-msg {
+    color: white;
+    padding: 30px;
+    font-size: 1.4em;
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    background-color: grey;
+    z-index: 2;
+}
+
+.user-msg button {
+    float: right;
+    border: 0;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.success {
+    background-color: rgb(41, 189, 73);
+}
+
+.danger {
+    background-color: rgb(216, 59, 59);
+}
+
+/* Font Awesome */
+
+@font-face {
+    font-family: awe-reg;
+    src: url("../font-awesome/fa-regular-400.ttf")
+}
+
+@font-face {
+    font-family: awe-solid;
+    src: url("../font-awesome/fa-solid-900.ttf")
+}
+
+.far::before {
+    font-family: awe-reg;
+}
+
+.fas::before {
+    font-family: awe-solid;
+}
+
+.fas.fa-trash::before {
+    content: "\f1f8";
+}
+
+.fas.fa-info-circle::before {
+    content: "\f05a";
+}
+
+.fas.fa-edit::before {
+    content: "\f044";
+}
+
+.fas.fa-th-large::before {
+    content: "\f009";
+}
+
+.fas.fa-plus::before {
+    content: "\f067";
+}
+
+.fas.fa-undo-alt::before {
+    content: "\f2ea";
+}
+
+.fas.fa-save::before {
+    content: "\f0c7";
+}
+
+.fas.fa-search::before {
+    content: "\f002";
+}
